@@ -46,12 +46,13 @@ class Users_model extends CI_Model {
 	function create_member()
 	{
 
-		$this->db->where('user_name', $this->input->post('username'));
+		$this->db->where('user_name', $this->input->post('username'))
+				->or_where('email_address', $this->input->post('email_address'));
 		$query = $this->db->get('membership');
 
         if($query->num_rows > 0){
         	echo '<div class="alert alert-error"><a class="close" data-dismiss="alert">×</a><strong>';
-			  echo "Username already taken";	
+			  echo "Username or email already taken";	
 			echo '</strong></div>';
 		}else{
 

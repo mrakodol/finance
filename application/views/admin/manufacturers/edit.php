@@ -35,7 +35,7 @@
             echo '<strong>Well done!</strong> manufacturer updated with success.';
           echo '</div>';       
         }else{
-          echo '<div class="alert alert-error">';
+          echo '<div class="alert alert-danger">';
             echo '<a class="close" data-dismiss="alert">×</a>';
             echo '<strong>Oh snap!</strong> change a few things up and try submitting again.';
           echo '</div>';          
@@ -53,13 +53,9 @@
       echo form_open('admin/manufacturers/update/'.$this->uri->segment(4).'', $attributes);
       ?>
         <fieldset>
-          <div class="control-group">
-            <label for="inputError" class="control-label">Description</label>
-            <div class="controls">
-              <input type="text" id="" name="name" value="<?php echo $manufacture[0]['name']; ?>" >
-              <!--<span class="help-inline">Woohoo!</span>-->
-            </div>
-          </div>
+        	<?php
+        	$this->form_builder->text('name','Name', $manufacture[0]['name'],'form-control','Name');
+        	?>
           <div class="form-actions">
             <button class="btn btn-primary" type="submit">Save changes</button>
             <button class="btn" type="reset">Cancel</button>

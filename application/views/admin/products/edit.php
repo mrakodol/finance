@@ -58,41 +58,16 @@
       echo form_open('admin/products/update/'.$this->uri->segment(4).'', $attributes);
       ?>
         <fieldset>
-          <div class="control-group">
-            <label for="inputError" class="control-label">Description</label>
-            <div class="controls">
-              <input type="text" id="" name="description" value="<?php echo $product[0]['description']; ?>" >
-              <!--<span class="help-inline">Woohoo!</span>-->
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="inputError" class="control-label">Stock</label>
-            <div class="controls">
-              <input type="text" id="" name="stock" value="<?php echo $product[0]['stock']; ?>">
-              <!--<span class="help-inline">Cost Price</span>-->
-            </div>
-          </div>          
-          <div class="control-group">
-            <label for="inputError" class="control-label">Cost Price</label>
-            <div class="controls">
-              <input type="text" id="" name="cost_price" value="<?php echo $product[0]['cost_price'];?>">
-              <!--<span class="help-inline">Cost Price</span>-->
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="inputError" class="control-label">Sell Price</label>
-            <div class="controls">
-              <input type="text" name="sell_price" value="<?php echo $product[0]['sell_price']; ?>">
-              <!--<span class="help-inline">OOps</span>-->
-            </div>
-          </div>
-          <?php
+        	<?php
+        	$this->form_builder->text('description','Description', $product[0]['description'],'form-control','Description');
+        	$this->form_builder->text('stock','Stock', $product[0]['stock'],'form-control','Stock');
+        	$this->form_builder->text('cost_price','Cost Price', $product[0]['cost_price'],'form-control','Cost Price');
+        	$this->form_builder->text('sell_price','Sell Price', $product[0]['sell_price'],'form-control','Sell Price');
+        	
           echo '<div class="control-group">';
             echo '<label for="manufacture_id" class="control-label">Manufacture</label>';
             echo '<div class="controls">';
-              //echo form_dropdown('manufacture_id', $options_manufacture, '', 'class="span2"');
-              
-              echo form_dropdown('manufacture_id', $options_manufacture, $product[0]['manufacture_id'], 'class="span2"');
+              echo form_dropdown('manufacture_id', $options_manufacture, $product[0]['manufacture_id'], 'class="form-control"');
 
             echo '</div>';
           echo '</div">';

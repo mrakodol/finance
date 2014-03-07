@@ -52,13 +52,9 @@
       echo form_open('admin/manufacturers/add', $attributes);
       ?>
         <fieldset>
-          <div class="control-group">
-            <label for="inputError" class="control-label">Name</label>
-            <div class="controls">
-              <input type="text" id="" name="name" value="<?php echo set_value('name'); ?>" >
-              <!--<span class="help-inline">Woohoo!</span>-->
-            </div>
-          </div>
+        	<?php
+        	$this->form_builder->text('name','Name', set_value('name'),'form-control','Name');
+        	?>
           <div class="form-actions">
             <button class="btn btn-primary" type="submit">Save changes</button>
             <button class="btn" type="reset">Cancel</button>

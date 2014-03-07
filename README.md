@@ -68,7 +68,7 @@ CREATE TABLE `membership` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
-  `email_addres` varchar(255) DEFAULT NULL,
+  `email_address` varchar(255) DEFAULT NULL,
   `user_name` varchar(255) DEFAULT NULL,
   `pass_word` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
