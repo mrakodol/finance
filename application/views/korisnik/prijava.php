@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en-US">
   <head>
-    <title>CodeIgniter Admin Sample Project</title>
+    <title>M:tel**Finance</title>
     <meta charset="utf-8">
     <link href="<?php echo base_url(); ?>assets/css/admin/global.css" rel="stylesheet" type="text/css">
   	<link href="<?php echo base_url(); ?>assets/css/redmond/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css">
@@ -11,21 +11,18 @@
 		  <div class="row">
       <?php 
       $attributes = array('class' => 'form-signin');
-      echo form_open('admin/login/validate_credentials', $attributes);
-      echo '<h2 class="form-signin-heading">Login</h2>';
-     $this->form_builder->text('user_name','Username', set_value('user_name'),'form-control','Username');
-	 $this->form_builder->password('password','Password', set_value('password'),'form-control','Password');
+      echo form_open('korisnik/prijava', $attributes);
+      echo '<h2 class="form-signin-heading">Prijava</h2>';
+     $this->form_builder->text('korisnickoime','Korisničko ime', set_value('korisnickoime'),'form-control','Korisničko ime');
+	 $this->form_builder->password('lozinka','Lozinka', set_value('password'),'form-control','Lozinka');
       if(isset($message_error) && $message_error){
           echo '<div class="alert alert-danger">';
             echo '<a class="close" data-dismiss="alert">×</a>';
-            echo '<strong>Oh snap!</strong> Change a few things up and try submitting again.';
+            echo 'Podaci nisu ispravni, pokušajte ponovno!';
           echo '</div>';             
       }
       echo "<br />";
-      echo anchor('admin/signup', 'Signup!');
-      echo "<br />";
-      echo "<br />";
-      echo form_submit('submit', 'Login', 'class="btn btn-large btn-primary"');
+      echo form_submit('submit', 'Prijava', 'class="btn btn-large btn-primary"');
       echo form_close();
       ?>      
    	 </div>

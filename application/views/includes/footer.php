@@ -2,7 +2,7 @@
 		<hr>
 		<div class="inner">
 			<div class="container">
-				<p class="right"><a href="#">Back to top</a></p>
+				<p class="right"><a href="#">Povratak na vrh</a></p>
 				<p>
 				</p>
 			</div>

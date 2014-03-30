@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en-US">
 <head>
-  <title>CodeIgniter Admin Sample Project</title>
+  <title>M:tel**Finance</title>
   <meta charset="utf-8">
   <link href="<?php echo base_url(); ?>assets/css/admin/global.css" rel="stylesheet" type="text/css">
   <link href="<?php echo base_url(); ?>assets/css/redmond/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css">
@@ -15,28 +15,28 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Skupi navigaciju</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="#" class="navbar-brand">Brand</a>
+          <a href="#" class="navbar-brand">M:tel**Finance</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li <?php if($this->uri->segment(2) == 'products'){echo 'class="active"';}?>>
-		          <a href="<?php echo base_url(); ?>admin/products">Products</a>
+            <li <?php if($this->uri->segment(2) == 'menu1'){echo 'class="active"';}?>>
+		          <a href="<?php echo base_url(); ?>">Menu 1</a>
 		        </li>
-		      <li <?php if($this->uri->segment(2) == 'manufacturers'){echo 'class="active"';}?>>
-		          <a href="<?php echo base_url(); ?>admin/manufacturers">Manufacturers</a>
+		      <li <?php if($this->uri->segment(2) == 'menu2'){echo 'class="active"';}?>>
+		          <a href="<?php echo base_url(); ?>">Menu 2</a>
 		        </li>
 		       <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sistem <b class="caret"></b></a>
 		          <ul class="dropdown-menu">
 		            <li>
-		              <a href="<?php echo base_url(); ?>admin/logout">Logout</a>
+		              <a href="<?php echo base_url(); ?>korisnik/odjava">Odjava</a>
 		            </li>
 		          </ul>
 		        </li>
